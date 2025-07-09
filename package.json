@@ -1,0 +1,16 @@
+{
+  "name": "my-simple-app",
+  "version": "1.0.0",
+  "description": "This is a simple full-stack project with: - A frontend HTML page to enter your name - A Node.js + Express backend that replies with a greeting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

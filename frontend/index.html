@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Frontend</title>
+</head>
+<body>
+  <h2>Enter your name:</h2>
+  <input type="text" id="nameInput" />
+  <button onclick="sendName()">Submit</button>
+  <p id="responseText"></p>
+
+  <script>
+    function sendName() {
+      const name = document.getElementById("nameInput").value;
+      fetch("http://localhost:3000/hello", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("responseText").innerText = data.message;
+      });
+    }
+  </script>
+</body>
+</html>
